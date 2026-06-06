@@ -138,8 +138,8 @@ const Index = () => {
                 Новостройки · Ростов-на-Дону
               </p>
               <h1 className="animate-fade-in-delay-1 font-display text-5xl md:text-7xl font-light leading-tight mb-6 text-[#FDFFF5]">
-                Привет! Я Вика —<br />
-                <span className="italic text-gold">твой гид на рынке новостроек</span>
+                <span className="italic">Привет! <span className="text-gold">Я Вика</span> —</span><br />
+                <span style={{ fontFamily: "'Times New Roman', Times, serif" }} className="not-italic text-[#FDFFF5]">твой гид на рынке новостроек</span>
               </h1>
               <div className="animate-fade-in-delay-2 w-16 h-px bg-gold mb-6" />
               <p className="animate-fade-in-delay-3 font-body text-base text-[#d6d7d7] leading-relaxed mb-4 max-w-lg">
@@ -172,18 +172,7 @@ const Index = () => {
                 </button>
               </div>
 
-              <div className="animate-fade-in-delay-5 grid grid-cols-3 gap-6 pt-8 border-t border-[#FDFFF5]/10">
-                {[
-                  { num: "200+", label: "Сделок" },
-                  { num: "8", label: "Лет опыта" },
-                  { num: "98%", label: "Довольных" },
-                ].map((s) => (
-                  <div key={s.label}>
-                    <div className="font-display text-4xl font-light text-gold">{s.num}</div>
-                    <div className="font-body text-xs tracking-wider uppercase text-[#d6d7d7]/60 mt-1">{s.label}</div>
-                  </div>
-                ))}
-              </div>
+
             </div>
 
             {/* RIGHT — фото */}
@@ -362,54 +351,78 @@ const Index = () => {
 
 
 
-      {/* PORTFOLIO */}
+      {/* REVIEWS */}
       <section id="portfolio" className="py-24 bg-background">
         <div className="max-w-7xl mx-auto px-6">
           <div className="mb-16">
-            <p className="font-body text-xs tracking-[0.3em] uppercase text-gold mb-4">Результаты</p>
-            <h2 className="font-display text-5xl font-light text-foreground gold-line mb-6">Закрытые сделки</h2>
+            <p className="font-body text-xs tracking-[0.3em] uppercase text-gold mb-4">Клиенты</p>
+            <h2 className="font-display text-5xl font-light text-foreground gold-line mb-6">Отзывы</h2>
             <p className="font-body text-base text-muted-foreground mt-10 max-w-xl">
-              Каждый кейс — это история доверия и профессионального подхода. Реальные результаты для реальных клиентов.
+              Реальные истории людей, которым я помогла найти своё жильё.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-border">
-            {deals.map((deal, i) => (
-              <div key={i} className="bg-background p-8 hover:bg-card transition-colors duration-300 group">
-                <div className="flex items-start justify-between mb-6">
-                  <span className="font-display text-5xl font-light text-border group-hover:text-gold transition-colors duration-300">{deal.year}</span>
-                  <span className={`font-body text-xs tracking-widest uppercase px-3 py-1 border ${
-                    deal.type === "Продажа" ? "border-gold text-gold" : "border-muted-foreground text-muted-foreground"
-                  }`}>
-                    {deal.type}
-                  </span>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              {
+                name: "Александра М.",
+                jk: "ЖК «Суворовский»",
+                text: "Вика помогла подобрать идеальную квартиру под наш бюджет. Всё объяснила честно, без навязывания. Ипотеку одобрили с первого раза — спасибо огромное!",
+                stars: 5,
+                date: "март 2024",
+              },
+              {
+                name: "Дмитрий К.",
+                jk: "ЖК «Западный луч»",
+                text: "Обратился по рекомендации. Виктория — настоящий профессионал. Рассказала про все минусы объекта, не скрывала ничего. Сделка прошла быстро и без нервов.",
+                stars: 5,
+                date: "февраль 2024",
+              },
+              {
+                name: "Наталья и Сергей Р.",
+                jk: "ЖК «Позитив»",
+                text: "Были на нескольких объектах с Викой. Она всегда была на связи, отвечала на все вопросы. Купили двушку — очень довольны и объектом, и сервисом!",
+                stars: 5,
+                date: "январь 2024",
+              },
+              {
+                name: "Ирина Т.",
+                jk: "ЖК «Родной берег»",
+                text: "Первая покупка недвижимости — страшно было жуть. Вика взяла за руку и провела через весь процесс. Теперь у меня своя квартира с видом на Дон 🎉",
+                stars: 5,
+                date: "декабрь 2023",
+              },
+              {
+                name: "Михаил О.",
+                jk: "ЖК «Платовский»",
+                text: "Брал как инвестицию. Вика подсказала наиболее ликвидные планировки и этажи. Уже через полгода сдаю в аренду — окупаемость отличная.",
+                stars: 5,
+                date: "октябрь 2023",
+              },
+              {
+                name: "Екатерина В.",
+                jk: "ЖК «Вершина»",
+                text: "Искала студию под ипотеку. Вика подобрала за один день — именно то, что нужно. С банком помогла всё оформить. Очень рекомендую!",
+                stars: 5,
+                date: "сентябрь 2023",
+              },
+            ].map((review, i) => (
+              <div key={i} className="card-hover bg-card border border-border p-6 flex flex-col gap-4">
+                <div className="flex gap-1">
+                  {Array.from({ length: review.stars }).map((_, si) => (
+                    <span key={si} className="text-gold text-base">★</span>
+                  ))}
                 </div>
-                <h3 className="font-display text-xl font-light text-foreground mb-3 leading-snug">{deal.title}</h3>
-                <p className="font-body text-sm text-muted-foreground mb-6 flex items-center gap-2">
-                  <Icon name="CheckCircle" size={14} className="text-gold flex-shrink-0" />
-                  {deal.result}
-                </p>
-                <div className="pt-4 border-t border-border">
-                  <span className="font-display text-2xl font-light text-gold">{deal.price}</span>
+                <p className="font-body text-sm text-foreground leading-relaxed flex-1">«{review.text}»</p>
+                <div className="pt-4 border-t border-border flex items-end justify-between">
+                  <div>
+                    <p className="font-body text-sm font-medium text-foreground">{review.name}</p>
+                    <p className="font-body text-xs text-gold tracking-wider">{review.jk}</p>
+                  </div>
+                  <p className="font-body text-xs text-muted-foreground">{review.date}</p>
                 </div>
               </div>
             ))}
-          </div>
-
-          <div className="mt-16 p-8 border border-gold/30 bg-card">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-              {[
-                { num: "200+", label: "Сделок закрыто" },
-                { num: "15 млрд", label: "Общий объём" },
-                { num: "98%", label: "Положительных отзывов" },
-                { num: "30 дней", label: "Средний срок сделки" },
-              ].map((s) => (
-                <div key={s.label}>
-                  <div className="font-display text-4xl font-light text-gold mb-2">{s.num}</div>
-                  <div className="font-body text-xs tracking-wider uppercase text-muted-foreground">{s.label}</div>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </section>
