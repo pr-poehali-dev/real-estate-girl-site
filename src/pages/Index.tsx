@@ -136,18 +136,18 @@ const Index = () => {
             {/* LEFT — текст */}
             <div>
               <p className="animate-fade-in font-body text-xs tracking-[0.3em] uppercase text-gold mb-6">
-                Элитная недвижимость · Москва
+                Элитная недвижимость · Ростов-на-Дону
               </p>
               <h1 className="animate-fade-in-delay-1 font-display text-6xl md:text-8xl font-light leading-none mb-6 text-[#FDFFF5]">
-                Анна<br />
-                <span className="italic text-gold">Соколова</span>
+                Виктория<br />
+                <span className="italic text-gold">Экизьян</span>
               </h1>
               <div className="animate-fade-in-delay-2 w-16 h-px bg-gold mb-6" />
               <p className="animate-fade-in-delay-3 font-body text-sm tracking-widest text-gold mb-6">
                 Риэлтор · Консультант по недвижимости
               </p>
               <p className="animate-fade-in-delay-3 font-body text-base text-[#d6d7d7] leading-relaxed mb-6 max-w-lg">
-                Специализируюсь на элитной недвижимости Москвы — от апартаментов в центре до загородных резиденций. Более 8 лет, более 200 сделок. Полное сопровождение от поиска до регистрации права собственности.
+                Специализируюсь на недвижимости Ростова-на-Дону — от квартир в центре до загородных домов. Более 8 лет, более 200 сделок. Полное сопровождение от поиска до регистрации права собственности.
               </p>
 
               <div className="animate-fade-in-delay-3 grid grid-cols-2 gap-4 mb-8">
@@ -194,7 +194,7 @@ const Index = () => {
             {/* RIGHT — фото */}
             <div className="animate-fade-in-delay-2 relative hidden lg:block">
               <div className="aspect-[3/4] overflow-hidden">
-                <img src={AGENT_PHOTO} alt="Анна Соколова" className="w-full h-full object-cover" />
+                <img src={AGENT_PHOTO} alt="Виктория Экизьян" className="w-full h-full object-cover" />
               </div>
               <div className="absolute -bottom-6 -left-6 border border-gold p-6 bg-[#2b323f]">
                 <div className="font-display text-4xl font-light text-gold">8+</div>
@@ -431,9 +431,8 @@ const Index = () => {
               </p>
               <div className="space-y-6 mb-12">
                 {[
-                  { icon: "Phone", label: "Телефон", value: "+7 (999) 000-00-00" },
-                  { icon: "Mail", label: "Email", value: "anna@example.com" },
-                  { icon: "MapPin", label: "Офис", value: "Москва, ул. Тверская, 1" },
+                  { icon: "Phone", label: "Телефон", value: "+7 (961) 307-69-07" },
+                  { icon: "Mail", label: "Email", value: "vikkiart@bk.ru" },
                 ].map((c) => (
                   <div key={c.label} className="flex items-start gap-4">
                     <div className="w-10 h-10 border border-gold flex items-center justify-center flex-shrink-0">
@@ -474,19 +473,7 @@ const Index = () => {
                 </div>
                 <Icon name="ArrowRight" size={20} className="group-hover:translate-x-1 transition-transform duration-200" />
               </a>
-              <div className="p-6 border border-[#FDFFF5]/20 bg-[#FDFFF5]/5 mt-4">
-                <p className="font-body text-xs tracking-wider uppercase text-[#d6d7d7]/60 mb-3">Режим работы</p>
-                <div className="space-y-2">
-                  <div className="flex justify-between">
-                    <span className="font-body text-sm text-[#FDFFF5]">Пн — Пт</span>
-                    <span className="font-body text-sm text-gold">9:00 — 20:00</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="font-body text-sm text-[#FDFFF5]">Сб — Вс</span>
-                    <span className="font-body text-sm text-gold">По договорённости</span>
-                  </div>
-                </div>
-              </div>
+
             </div>
           </div>
         </div>
@@ -495,9 +482,9 @@ const Index = () => {
       {/* FOOTER */}
       <footer className="border-t border-border py-8">
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
-          <span className="font-display text-lg tracking-widest text-gold uppercase">А. Соколова</span>
+          <span className="font-display text-lg tracking-widest text-gold uppercase">В. Экизьян</span>
           <p className="font-body text-xs text-muted-foreground tracking-wider">
-            © 2024 · Риэлтор в Москве · Элитная недвижимость
+            © 2024 · Риэлтор в Ростове-на-Дону · Недвижимость
           </p>
           <div className="flex gap-4">
             <a href={INSTAGRAM_URL} target="_blank" rel="noreferrer"
