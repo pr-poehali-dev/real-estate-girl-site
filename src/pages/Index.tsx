@@ -137,9 +137,9 @@ const Index = () => {
               <p className="animate-fade-in font-body text-xs tracking-[0.3em] uppercase text-gold mb-6">
                 Новостройки · Ростов-на-Дону
               </p>
-              <h1 className="animate-fade-in-delay-1 font-display text-5xl md:text-7xl font-light leading-tight mb-6 text-[#FDFFF5]">
-                <span className="italic">Привет! <span className="text-gold">Я Вика</span> —</span><br />
-                <span style={{ fontFamily: "'Times New Roman', Times, serif" }} className="not-italic text-[#FDFFF5]">твой гид на рынке новостроек</span>
+              <h1 className="animate-fade-in-delay-1 font-display text-5xl md:text-7xl leading-tight mb-6 text-[#FDFFF5]">
+                <span className="italic font-bold">Привет! <span className="text-gold">Я Вика</span> —</span><br />
+                <span style={{ fontFamily: "'Times New Roman', Times, serif" }} className="not-italic font-thin text-[#FDFFF5]">твой гид на рынке новостроек</span>
               </h1>
               <div className="animate-fade-in-delay-2 w-16 h-px bg-gold mb-6" />
               <p className="animate-fade-in-delay-3 font-body text-base text-[#d6d7d7] leading-relaxed mb-4 max-w-lg">
@@ -180,10 +180,7 @@ const Index = () => {
               <div className="aspect-[3/4] overflow-hidden">
                 <img src={AGENT_PHOTO} alt="Виктория Экизьян" className="w-full h-full object-cover" />
               </div>
-              <div className="absolute -bottom-6 -left-6 border border-gold p-6 bg-[#2b323f]">
-                <div className="font-display text-4xl font-light text-gold">8+</div>
-                <div className="font-body text-xs tracking-widest uppercase text-[#d6d7d7]/60 mt-1">лет в профессии</div>
-              </div>
+
               <div className="absolute top-6 -right-4 flex flex-col gap-3">
                 <a href={INSTAGRAM_URL} target="_blank" rel="noreferrer"
                   className="w-10 h-10 bg-gold flex items-center justify-center hover:opacity-80 transition-opacity">
@@ -250,53 +247,6 @@ const Index = () => {
                     </button>
                   ))}
                 </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Interactive Map */}
-          <div className="mb-16 border border-border overflow-hidden">
-            <div className="px-6 py-4 border-b border-border flex items-center gap-3">
-              <Icon name="MapPin" size={16} className="text-gold" />
-              <span className="font-body text-xs tracking-widest uppercase text-muted-foreground">Расположение объектов на карте</span>
-            </div>
-            <div className="relative bg-[hsl(220,15%,9%)] h-64 md:h-80 overflow-hidden">
-              <svg className="absolute inset-0 w-full h-full opacity-10" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-                    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="hsl(43,65%,65%)" strokeWidth="0.5"/>
-                  </pattern>
-                </defs>
-                <rect width="100%" height="100%" fill="url(#grid)" />
-              </svg>
-              <svg className="absolute inset-0 w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-                <ellipse cx="50" cy="52" rx="28" ry="24" fill="none" stroke="hsl(43,65%,65%)" strokeWidth="0.3" strokeOpacity="0.4"/>
-                <ellipse cx="50" cy="52" rx="18" ry="15" fill="none" stroke="hsl(43,65%,65%)" strokeWidth="0.3" strokeOpacity="0.3"/>
-                <ellipse cx="50" cy="52" rx="10" ry="8" fill="none" stroke="hsl(43,65%,65%)" strokeWidth="0.3" strokeOpacity="0.25"/>
-                <line x1="50" y1="20" x2="50" y2="85" stroke="hsl(43,65%,65%)" strokeWidth="0.2" strokeOpacity="0.2"/>
-                <line x1="15" y1="52" x2="85" y2="52" stroke="hsl(43,65%,65%)" strokeWidth="0.2" strokeOpacity="0.2"/>
-              </svg>
-              {mapObjects.map((obj) => (
-                <button
-                  key={obj.id}
-                  style={{ left: `${obj.x}%`, top: `${obj.y}%` }}
-                  className="absolute -translate-x-1/2 -translate-y-1/2 group"
-                  onMouseEnter={() => setMapHover(obj.id)}
-                  onMouseLeave={() => setMapHover(null)}
-                >
-                  <div className={`w-4 h-4 rounded-full border-2 transition-all duration-200 ${
-                    mapHover === obj.id ? "bg-gold border-gold scale-150" : "bg-gold/40 border-gold"
-                  }`} />
-                  {mapHover === obj.id && (
-                    <div className="absolute bottom-6 left-1/2 -translate-x-1/2 bg-card border border-gold px-3 py-1.5 whitespace-nowrap z-10">
-                      <p className="font-body text-xs text-gold tracking-wider">{properties[obj.id - 1]?.title}</p>
-                      <p className="font-body text-xs text-muted-foreground">{formatPrice(properties[obj.id - 1]?.price)}</p>
-                    </div>
-                  )}
-                </button>
-              ))}
-              <div className="absolute bottom-4 right-4 font-body text-xs text-muted-foreground tracking-wider uppercase">
-                Москва · Схема районов
               </div>
             </div>
           </div>
