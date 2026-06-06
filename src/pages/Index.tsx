@@ -1,20 +1,21 @@
 import { useState } from "react";
 import Icon from "@/components/ui/icon";
 
-const AGENT_PHOTO = "https://cdn.poehali.dev/projects/cfa8cd8f-becf-49b5-8c9d-709a381dc130/files/8cbc890d-3336-45ca-a49f-45eb09d671d3.jpg";
-const APARTMENT_1 = "https://cdn.poehali.dev/projects/cfa8cd8f-becf-49b5-8c9d-709a381dc130/files/1218480e-fa39-45d4-aff0-216108f053b3.jpg";
-const APARTMENT_2 = "https://cdn.poehali.dev/projects/cfa8cd8f-becf-49b5-8c9d-709a381dc130/files/b29b8cfe-2147-4cea-8237-9bf8b9d5f51b.jpg";
+const AGENT_PHOTO = "https://cdn.poehali.dev/projects/cfa8cd8f-becf-49b5-8c9d-709a381dc130/bucket/b204a07a-580e-4340-8e74-78b6e13b4c10.jpg";
+const JK_1 = "https://cdn.poehali.dev/projects/cfa8cd8f-becf-49b5-8c9d-709a381dc130/files/e26d7c5b-2b99-403e-b94a-80c3ce36774c.jpg";
+const JK_2 = "https://cdn.poehali.dev/projects/cfa8cd8f-becf-49b5-8c9d-709a381dc130/files/faabf641-8fbc-4785-aa64-781b11b003fe.jpg";
+const JK_3 = "https://cdn.poehali.dev/projects/cfa8cd8f-becf-49b5-8c9d-709a381dc130/files/6c8ffc51-8c20-436d-8f1f-a50979dc3d13.jpg";
 
 const INSTAGRAM_URL = "https://www.instagram.com/viktoria_ekizyan?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==";
 const TELEGRAM_URL = "https://t.me/dvizh_nedvizh_61";
 
 const properties = [
-  { id: 1, type: "apartment", title: "ЖК «Западный луч»", address: "ул. Вавилова, 68", price: 5_200_000, area: 42, rooms: 1, district: "Советский", image: APARTMENT_1, tag: "Новинка" },
-  { id: 2, type: "apartment", title: "ЖК «Позитив»", address: "ул. Жмайлова, 4е", price: 7_800_000, area: 68, rooms: 2, district: "Советский", image: APARTMENT_2, tag: "Топ" },
-  { id: 3, type: "apartment", title: "ЖК «Родной берег»", address: "пр. Королёва, 12а", price: 6_400_000, area: 56, rooms: 2, district: "Кировский", image: APARTMENT_1, tag: null },
-  { id: 4, type: "apartment", title: "ЖК «Суворовский»", address: "пр. Маршала Жукова, 1", price: 9_100_000, area: 85, rooms: 3, district: "Суворовский", image: APARTMENT_2, tag: "Эксклюзив" },
-  { id: 5, type: "apartment", title: "ЖК «Вершина»", address: "ул. Берег реки Дон, 1", price: 4_900_000, area: 38, rooms: 1, district: "Кировский", image: APARTMENT_1, tag: null },
-  { id: 6, type: "apartment", title: "ЖК «Платовский»", address: "ул. Платовский пр-т, 18", price: 11_500_000, area: 102, rooms: 3, district: "Советский", image: APARTMENT_2, tag: "Топ" },
+  { id: 1, type: "apartment", title: "ЖК «Западный луч»", address: "ул. Вавилова, 68", price: 5_200_000, area: 42, rooms: 1, district: "Советский", image: JK_1, tag: "Новинка" },
+  { id: 2, type: "apartment", title: "ЖК «Позитив»", address: "ул. Жмайлова, 4е", price: 7_800_000, area: 68, rooms: 2, district: "Советский", image: JK_2, tag: "Топ" },
+  { id: 3, type: "apartment", title: "ЖК «Родной берег»", address: "пр. Королёва, 12а", price: 6_400_000, area: 56, rooms: 2, district: "Кировский", image: JK_3, tag: null },
+  { id: 4, type: "apartment", title: "ЖК «Суворовский»", address: "пр. Маршала Жукова, 1", price: 9_100_000, area: 85, rooms: 3, district: "Суворовский", image: JK_1, tag: "Хит" },
+  { id: 5, type: "apartment", title: "ЖК «Вершина»", address: "ул. Берег реки Дон, 1", price: 4_900_000, area: 38, rooms: 1, district: "Кировский", image: JK_2, tag: null },
+  { id: 6, type: "apartment", title: "ЖК «Платовский»", address: "ул. Платовский пр-т, 18", price: 11_500_000, area: 102, rooms: 3, district: "Советский", image: JK_3, tag: "Топ" },
 ];
 
 const deals = [
@@ -134,26 +135,22 @@ const Index = () => {
             {/* LEFT — текст */}
             <div>
               <p className="animate-fade-in font-body text-xs tracking-[0.3em] uppercase text-gold mb-6">
-                Элитная недвижимость · Ростов-на-Дону
+                Новостройки · Ростов-на-Дону
               </p>
-              <h1 className="animate-fade-in-delay-1 font-display text-6xl md:text-8xl font-light leading-none mb-6 text-[#FDFFF5]">
-                Виктория<br />
-                <span className="italic text-gold">Экизьян</span>
+              <h1 className="animate-fade-in-delay-1 font-display text-5xl md:text-7xl font-light leading-tight mb-6 text-[#FDFFF5]">
+                Привет! Я Вика —<br />
+                <span className="italic text-gold">твой гид на рынке новостроек</span>
               </h1>
               <div className="animate-fade-in-delay-2 w-16 h-px bg-gold mb-6" />
-              <p className="animate-fade-in-delay-3 font-body text-sm tracking-widest text-gold mb-6">
-                Риэлтор · Консультант по недвижимости
+              <p className="animate-fade-in-delay-3 font-body text-base text-[#d6d7d7] leading-relaxed mb-4 max-w-lg">
+                Я партнёр всех застройщиков Ростова-на-Дону, Аксая и Батайска. Я не «просто агент» — я твой друг-эксперт, который:
               </p>
-              <p className="animate-fade-in-delay-3 font-body text-base text-[#d6d7d7] leading-relaxed mb-6 max-w-lg">
-                Специализируюсь на недвижимости Ростова-на-Дону — от квартир в центре до загородных домов. Более 8 лет, более 200 сделок. Полное сопровождение от поиска до регистрации права собственности.
-              </p>
-
-              <div className="animate-fade-in-delay-3 grid grid-cols-2 gap-4 mb-8">
+              <div className="animate-fade-in-delay-3 flex flex-col gap-3 mb-8">
                 {[
-                  { icon: "Award", text: "Сертифицированный риэлтор РГР" },
-                  { icon: "Shield", text: "Полное юридическое сопровождение" },
-                  { icon: "Users", text: "База проверенных застройщиков" },
-                  { icon: "TrendingUp", text: "Инвестиционные консультации" },
+                  { icon: "Search", text: "Подберёт идеальную квартиру под твой бюджет и запрос" },
+                  { icon: "MessageCircle", text: "Расскажет всё честно — со всеми плюсами и минусами объекта" },
+                  { icon: "CreditCard", text: "Поможет с одобрением ипотеки" },
+                  { icon: "Heart", text: "Сбережёт твои нервы и будет рядом на всех этапах сделки" },
                 ].map((item) => (
                   <div key={item.text} className="flex items-start gap-3">
                     <div className="w-7 h-7 border border-gold flex items-center justify-center flex-shrink-0 mt-0.5">
