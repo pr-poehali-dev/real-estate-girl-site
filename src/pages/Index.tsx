@@ -138,7 +138,7 @@ const Index = () => {
                 Новостройки · Ростов-на-Дону
               </p>
               <h1 className="animate-fade-in-delay-1 font-display leading-tight mb-6 text-[#FDFFF5]">
-                <span className="italic font-light text-4xl md:text-5xl">Привет! <span className="text-gold">Я Вика</span> —</span><br />
+                <span className="italic font-light text-5xl md:text-7xl">Привет! <span className="text-gold">Я Вика</span> —</span><br />
                 <span className="font-display not-italic font-light text-4xl md:text-6xl text-[#FDFFF5]/90">твой гид на рынке новостроек</span>
               </h1>
               <div className="animate-fade-in-delay-2 w-16 h-px bg-gold mb-6" />
