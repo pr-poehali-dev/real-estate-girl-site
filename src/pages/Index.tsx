@@ -5,8 +5,8 @@ const AGENT_PHOTO = "https://cdn.poehali.dev/projects/cfa8cd8f-becf-49b5-8c9d-70
 const APARTMENT_1 = "https://cdn.poehali.dev/projects/cfa8cd8f-becf-49b5-8c9d-709a381dc130/files/1218480e-fa39-45d4-aff0-216108f053b3.jpg";
 const APARTMENT_2 = "https://cdn.poehali.dev/projects/cfa8cd8f-becf-49b5-8c9d-709a381dc130/files/b29b8cfe-2147-4cea-8237-9bf8b9d5f51b.jpg";
 
-const INSTAGRAM_URL = "https://instagram.com";
-const TELEGRAM_URL = "https://t.me";
+const INSTAGRAM_URL = "https://www.instagram.com/viktoria_ekizyan?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==";
+const TELEGRAM_URL = "https://t.me/dvizh_nedvizh_61";
 
 const properties = [
   { id: 1, type: "apartment", title: "Апартаменты в Пресненском районе", address: "ул. Большая Грузинская, 12", price: 42_500_000, area: 87, rooms: 3, district: "ЦАО", image: APARTMENT_1, tag: "Новинка" },
