@@ -128,18 +128,18 @@ const Index = () => {
       </nav>
 
       {/* HERO + ABOUT */}
-      <section id="home" className="relative min-h-screen flex items-center pt-16 overflow-hidden bg-[#2b323f]">
-        <div className="relative z-10 max-w-7xl mx-auto px-6 py-20 w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+      <section id="home" className="relative flex items-center pt-16 overflow-hidden bg-[#2b323f]">
+        <div className="relative z-10 max-w-7xl mx-auto px-6 py-10 w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-stretch">
 
             {/* LEFT — текст */}
-            <div>
+            <div className="flex flex-col justify-center">
               <p className="animate-fade-in font-body text-xs tracking-[0.3em] uppercase text-gold mb-6">
                 Новостройки · Ростов-на-Дону
               </p>
-              <h1 className="animate-fade-in-delay-1 font-display text-5xl md:text-7xl leading-tight mb-6 text-[#FDFFF5]">
-                <span className="italic font-bold">Привет! <span className="text-gold">Я Вика</span> —</span><br />
-                <span className="font-display not-italic font-light text-3xl md:text-4xl text-[#FDFFF5]/80">твой гид на рынке новостроек</span>
+              <h1 className="animate-fade-in-delay-1 font-display leading-tight mb-6 text-[#FDFFF5]">
+                <span className="italic font-light text-4xl md:text-5xl">Привет! <span className="text-gold">Я Вика</span> —</span><br />
+                <span className="font-display not-italic font-light text-4xl md:text-6xl text-[#FDFFF5]/90">твой гид на рынке новостроек</span>
               </h1>
               <div className="animate-fade-in-delay-2 w-16 h-px bg-gold mb-6" />
               <p className="animate-fade-in-delay-3 font-body text-base text-[#d6d7d7] leading-relaxed mb-4 max-w-lg">
