@@ -324,27 +324,27 @@ const Index = () => {
       </section>
 
       {/* ABOUT */}
-      <section id="about" className="py-24 bg-[hsl(220,15%,6%)]">
+      <section id="about" className="py-24 bg-[#2b323f]">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="relative">
               <div className="aspect-[3/4] overflow-hidden">
                 <img src={AGENT_PHOTO} alt="Анна Соколова" className="w-full h-full object-cover" />
               </div>
-              <div className="absolute -bottom-6 -right-6 border border-gold p-6 bg-background hidden lg:block">
+              <div className="absolute -bottom-6 -right-6 border border-gold p-6 bg-[#FDFFF5] hidden lg:block">
                 <div className="font-display text-4xl font-light text-gold">8+</div>
-                <div className="font-body text-xs tracking-widest uppercase text-muted-foreground mt-1">лет в профессии</div>
+                <div className="font-body text-xs tracking-widest uppercase text-[#2b323f]/60 mt-1">лет в профессии</div>
               </div>
             </div>
             <div>
               <p className="font-body text-xs tracking-[0.3em] uppercase text-gold mb-4">Специалист</p>
-              <h2 className="font-display text-5xl font-light text-foreground mb-2">Анна Соколова</h2>
+              <h2 className="font-display text-5xl font-light text-[#FDFFF5] mb-2">Анна Соколова</h2>
               <p className="font-body text-sm tracking-widest text-gold mb-8">Риэлтор · Консультант по недвижимости</p>
               <div className="w-16 h-px bg-gold mb-8" />
-              <p className="font-body text-base text-muted-foreground leading-relaxed mb-6">
+              <p className="font-body text-base text-[#d6d7d7] leading-relaxed mb-6">
                 Специализируюсь на элитной недвижимости Москвы — от апартаментов в центре города до загородных резиденций. Мой подход основан на глубоком знании рынка, персональном внимании к каждому клиенту и безупречной юридической поддержке.
               </p>
-              <p className="font-body text-base text-muted-foreground leading-relaxed mb-10">
+              <p className="font-body text-base text-[#d6d7d7] leading-relaxed mb-10">
                 Работаю с крупнейшими застройщиками и собственниками. Каждый клиент получает эксклюзивный сервис: подбор объектов под запрос, переговоры, сопровождение сделки под ключ.
               </p>
               <div className="grid grid-cols-2 gap-6 mb-10">
@@ -358,7 +358,7 @@ const Index = () => {
                     <div className="w-8 h-8 border border-gold flex items-center justify-center flex-shrink-0 mt-0.5">
                       <Icon name={item.icon} size={14} className="text-gold" />
                     </div>
-                    <p className="font-body text-sm text-muted-foreground leading-snug">{item.text}</p>
+                    <p className="font-body text-sm text-[#d6d7d7] leading-snug">{item.text}</p>
                   </div>
                 ))}
               </div>
@@ -432,13 +432,13 @@ const Index = () => {
       </section>
 
       {/* CONTACTS */}
-      <section id="contacts" className="py-24 bg-[hsl(220,15%,6%)]">
+      <section id="contacts" className="py-24 bg-[#2b323f]">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             <div>
               <p className="font-body text-xs tracking-[0.3em] uppercase text-gold mb-4">Связаться</p>
-              <h2 className="font-display text-5xl font-light text-foreground gold-line mb-12">Контакты</h2>
-              <p className="font-body text-base text-muted-foreground leading-relaxed mb-12 mt-10">
+              <h2 className="font-display text-5xl font-light text-[#FDFFF5] gold-line mb-12">Контакты</h2>
+              <p className="font-body text-base text-[#d6d7d7] leading-relaxed mb-12 mt-10">
                 Готова ответить на все вопросы о покупке, продаже или аренде недвижимости. Первичная консультация — бесплатно.
               </p>
               <div className="space-y-6 mb-12">
@@ -452,16 +452,16 @@ const Index = () => {
                       <Icon name={c.icon} size={16} className="text-gold" />
                     </div>
                     <div>
-                      <p className="font-body text-xs tracking-widest uppercase text-muted-foreground mb-1">{c.label}</p>
-                      <p className="font-body text-base text-foreground">{c.value}</p>
+                      <p className="font-body text-xs tracking-widest uppercase text-[#d6d7d7]/60 mb-1">{c.label}</p>
+                      <p className="font-body text-base text-[#FDFFF5]">{c.value}</p>
                     </div>
                   </div>
                 ))}
               </div>
             </div>
             <div className="flex flex-col justify-center gap-6">
-              <h3 className="font-display text-3xl font-light text-foreground">Написать напрямую</h3>
-              <p className="font-body text-sm text-muted-foreground">
+              <h3 className="font-display text-3xl font-light text-[#FDFFF5]">Написать напрямую</h3>
+              <p className="font-body text-sm text-[#d6d7d7]">
                 Выберите удобный мессенджер — отвечаю в течение часа в рабочие дни.
               </p>
               <a href={TELEGRAM_URL} target="_blank" rel="noreferrer"
@@ -486,15 +486,15 @@ const Index = () => {
                 </div>
                 <Icon name="ArrowRight" size={20} className="group-hover:translate-x-1 transition-transform duration-200" />
               </a>
-              <div className="p-6 border border-border bg-card mt-4">
-                <p className="font-body text-xs tracking-wider uppercase text-muted-foreground mb-3">Режим работы</p>
+              <div className="p-6 border border-[#FDFFF5]/20 bg-[#FDFFF5]/5 mt-4">
+                <p className="font-body text-xs tracking-wider uppercase text-[#d6d7d7]/60 mb-3">Режим работы</p>
                 <div className="space-y-2">
                   <div className="flex justify-between">
-                    <span className="font-body text-sm text-foreground">Пн — Пт</span>
+                    <span className="font-body text-sm text-[#FDFFF5]">Пн — Пт</span>
                     <span className="font-body text-sm text-gold">9:00 — 20:00</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="font-body text-sm text-foreground">Сб — Вс</span>
+                    <span className="font-body text-sm text-[#FDFFF5]">Сб — Вс</span>
                     <span className="font-body text-sm text-gold">По договорённости</span>
                   </div>
                 </div>
