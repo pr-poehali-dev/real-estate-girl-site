@@ -70,7 +70,6 @@ const Index = () => {
   const navItems = [
     { id: "home", label: "Главная" },
     { id: "catalog", label: "Каталог" },
-    { id: "about", label: "О риэлторе" },
     { id: "portfolio", label: "Портфолио" },
     { id: "contacts", label: "Контакты" },
   ];
@@ -129,47 +128,90 @@ const Index = () => {
         )}
       </nav>
 
-      {/* HERO */}
-      <section id="home" className="relative min-h-screen flex items-center pt-16 overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <img src={APARTMENT_2} alt="hero" className="w-full h-full object-cover opacity-20" />
-          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent" />
-        </div>
-        <div className="relative z-10 max-w-7xl mx-auto px-6 py-24 w-full">
-          <div className="max-w-2xl">
-            <p className="animate-fade-in font-body text-xs tracking-[0.3em] uppercase text-gold mb-6">
-              Элитная недвижимость · Москва
-            </p>
-            <h1 className="animate-fade-in-delay-1 font-display text-6xl md:text-8xl font-light leading-none mb-8 text-foreground">
-              Анна<br />
-              <span className="italic text-gold">Соколова</span>
-            </h1>
-            <div className="animate-fade-in-delay-2 w-16 h-px bg-gold mb-8" />
-            <p className="animate-fade-in-delay-3 font-body text-base md:text-lg text-muted-foreground leading-relaxed mb-12 max-w-lg">
-              Более 8 лет в сфере элитной недвижимости Москвы. Более 200 успешных сделок. Полное сопровождение от поиска до регистрации права собственности.
-            </p>
-            <div className="animate-fade-in-delay-4 flex flex-col sm:flex-row gap-4">
-              <button onClick={() => scrollTo("catalog")}
-                className="px-8 py-4 bg-gold text-background font-body text-sm tracking-widest uppercase hover:opacity-90 transition-all duration-200 font-medium">
-                Смотреть объекты
-              </button>
-              <button onClick={() => scrollTo("contacts")}
-                className="px-8 py-4 border border-gold text-gold font-body text-sm tracking-widest uppercase hover:bg-gold hover:text-background transition-all duration-200">
-                Связаться
-              </button>
-            </div>
-          </div>
-          <div className="animate-fade-in-delay-5 grid grid-cols-3 gap-8 mt-20 max-w-lg">
-            {[
-              { num: "200+", label: "Сделок" },
-              { num: "8", label: "Лет опыта" },
-              { num: "98%", label: "Довольных клиентов" },
-            ].map((s) => (
-              <div key={s.label}>
-                <div className="font-display text-4xl font-light text-gold">{s.num}</div>
-                <div className="font-body text-xs tracking-wider uppercase text-muted-foreground mt-1">{s.label}</div>
+      {/* HERO + ABOUT */}
+      <section id="home" className="relative min-h-screen flex items-center pt-16 overflow-hidden bg-[#2b323f]">
+        <div className="relative z-10 max-w-7xl mx-auto px-6 py-20 w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+
+            {/* LEFT — текст */}
+            <div>
+              <p className="animate-fade-in font-body text-xs tracking-[0.3em] uppercase text-gold mb-6">
+                Элитная недвижимость · Москва
+              </p>
+              <h1 className="animate-fade-in-delay-1 font-display text-6xl md:text-8xl font-light leading-none mb-6 text-[#FDFFF5]">
+                Анна<br />
+                <span className="italic text-gold">Соколова</span>
+              </h1>
+              <div className="animate-fade-in-delay-2 w-16 h-px bg-gold mb-6" />
+              <p className="animate-fade-in-delay-3 font-body text-sm tracking-widest text-gold mb-6">
+                Риэлтор · Консультант по недвижимости
+              </p>
+              <p className="animate-fade-in-delay-3 font-body text-base text-[#d6d7d7] leading-relaxed mb-6 max-w-lg">
+                Специализируюсь на элитной недвижимости Москвы — от апартаментов в центре до загородных резиденций. Более 8 лет, более 200 сделок. Полное сопровождение от поиска до регистрации права собственности.
+              </p>
+
+              <div className="animate-fade-in-delay-3 grid grid-cols-2 gap-4 mb-8">
+                {[
+                  { icon: "Award", text: "Сертифицированный риэлтор РГР" },
+                  { icon: "Shield", text: "Полное юридическое сопровождение" },
+                  { icon: "Users", text: "База проверенных застройщиков" },
+                  { icon: "TrendingUp", text: "Инвестиционные консультации" },
+                ].map((item) => (
+                  <div key={item.text} className="flex items-start gap-3">
+                    <div className="w-7 h-7 border border-gold flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <Icon name={item.icon} size={13} className="text-gold" />
+                    </div>
+                    <p className="font-body text-sm text-[#d6d7d7] leading-snug">{item.text}</p>
+                  </div>
+                ))}
               </div>
-            ))}
+
+              <div className="animate-fade-in-delay-4 flex flex-col sm:flex-row gap-4 mb-10">
+                <button onClick={() => scrollTo("catalog")}
+                  className="px-8 py-4 bg-gold text-[#FDFFF5] font-body text-sm tracking-widest uppercase hover:opacity-90 transition-all duration-200 font-medium">
+                  Смотреть объекты
+                </button>
+                <button onClick={() => scrollTo("contacts")}
+                  className="px-8 py-4 border border-gold text-gold font-body text-sm tracking-widest uppercase hover:bg-gold hover:text-[#FDFFF5] transition-all duration-200">
+                  Связаться
+                </button>
+              </div>
+
+              <div className="animate-fade-in-delay-5 grid grid-cols-3 gap-6 pt-8 border-t border-[#FDFFF5]/10">
+                {[
+                  { num: "200+", label: "Сделок" },
+                  { num: "8", label: "Лет опыта" },
+                  { num: "98%", label: "Довольных" },
+                ].map((s) => (
+                  <div key={s.label}>
+                    <div className="font-display text-4xl font-light text-gold">{s.num}</div>
+                    <div className="font-body text-xs tracking-wider uppercase text-[#d6d7d7]/60 mt-1">{s.label}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* RIGHT — фото */}
+            <div className="animate-fade-in-delay-2 relative hidden lg:block">
+              <div className="aspect-[3/4] overflow-hidden">
+                <img src={AGENT_PHOTO} alt="Анна Соколова" className="w-full h-full object-cover" />
+              </div>
+              <div className="absolute -bottom-6 -left-6 border border-gold p-6 bg-[#2b323f]">
+                <div className="font-display text-4xl font-light text-gold">8+</div>
+                <div className="font-body text-xs tracking-widest uppercase text-[#d6d7d7]/60 mt-1">лет в профессии</div>
+              </div>
+              <div className="absolute top-6 -right-4 flex flex-col gap-3">
+                <a href={INSTAGRAM_URL} target="_blank" rel="noreferrer"
+                  className="w-10 h-10 bg-gold flex items-center justify-center hover:opacity-80 transition-opacity">
+                  <Icon name="Instagram" size={18} className="text-[#FDFFF5]" />
+                </a>
+                <a href={TELEGRAM_URL} target="_blank" rel="noreferrer"
+                  className="w-10 h-10 border border-gold flex items-center justify-center hover:bg-gold transition-colors group">
+                  <Icon name="Send" size={18} className="text-gold group-hover:text-[#FDFFF5] transition-colors" />
+                </a>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
@@ -323,61 +365,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* ABOUT */}
-      <section id="about" className="py-24 bg-[#2b323f]">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="relative">
-              <div className="aspect-[3/4] overflow-hidden">
-                <img src={AGENT_PHOTO} alt="Анна Соколова" className="w-full h-full object-cover" />
-              </div>
-              <div className="absolute -bottom-6 -right-6 border border-gold p-6 bg-[#FDFFF5] hidden lg:block">
-                <div className="font-display text-4xl font-light text-gold">8+</div>
-                <div className="font-body text-xs tracking-widest uppercase text-[#2b323f]/60 mt-1">лет в профессии</div>
-              </div>
-            </div>
-            <div>
-              <p className="font-body text-xs tracking-[0.3em] uppercase text-gold mb-4">Специалист</p>
-              <h2 className="font-display text-5xl font-light text-[#FDFFF5] mb-2">Анна Соколова</h2>
-              <p className="font-body text-sm tracking-widest text-gold mb-8">Риэлтор · Консультант по недвижимости</p>
-              <div className="w-16 h-px bg-gold mb-8" />
-              <p className="font-body text-base text-[#d6d7d7] leading-relaxed mb-6">
-                Специализируюсь на элитной недвижимости Москвы — от апартаментов в центре города до загородных резиденций. Мой подход основан на глубоком знании рынка, персональном внимании к каждому клиенту и безупречной юридической поддержке.
-              </p>
-              <p className="font-body text-base text-[#d6d7d7] leading-relaxed mb-10">
-                Работаю с крупнейшими застройщиками и собственниками. Каждый клиент получает эксклюзивный сервис: подбор объектов под запрос, переговоры, сопровождение сделки под ключ.
-              </p>
-              <div className="grid grid-cols-2 gap-6 mb-10">
-                {[
-                  { icon: "Award", text: "Сертифицированный риэлтор РГР" },
-                  { icon: "Shield", text: "Полное юридическое сопровождение" },
-                  { icon: "Users", text: "База проверенных застройщиков" },
-                  { icon: "TrendingUp", text: "Инвестиционные консультации" },
-                ].map((item) => (
-                  <div key={item.text} className="flex items-start gap-3">
-                    <div className="w-8 h-8 border border-gold flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <Icon name={item.icon} size={14} className="text-gold" />
-                    </div>
-                    <p className="font-body text-sm text-[#d6d7d7] leading-snug">{item.text}</p>
-                  </div>
-                ))}
-              </div>
-              <div className="flex gap-4">
-                <a href={INSTAGRAM_URL} target="_blank" rel="noreferrer"
-                  className="flex items-center gap-2 px-6 py-3 border border-border text-muted-foreground hover:border-gold hover:text-gold transition-all duration-200">
-                  <Icon name="Instagram" size={16} />
-                  <span className="font-body text-xs tracking-widest uppercase">Instagram</span>
-                </a>
-                <a href={TELEGRAM_URL} target="_blank" rel="noreferrer"
-                  className="flex items-center gap-2 px-6 py-3 bg-gold text-background hover:opacity-90 transition-all duration-200">
-                  <Icon name="Send" size={16} />
-                  <span className="font-body text-xs tracking-widest uppercase font-medium">Telegram</span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+
 
       {/* PORTFOLIO */}
       <section id="portfolio" className="py-24 bg-background">
