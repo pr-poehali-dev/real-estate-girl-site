@@ -9,39 +9,37 @@ const INSTAGRAM_URL = "https://www.instagram.com/viktoria_ekizyan?utm_source=ig_
 const TELEGRAM_URL = "https://t.me/dvizh_nedvizh_61";
 
 const properties = [
-  { id: 1, type: "apartment", title: "Апартаменты в Пресненском районе", address: "ул. Большая Грузинская, 12", price: 42_500_000, area: 87, rooms: 3, district: "ЦАО", image: APARTMENT_1, tag: "Новинка" },
-  { id: 2, type: "penthouse", title: "Пентхаус с видом на Москву-реку", address: "Котельническая наб., 1", price: 125_000_000, area: 210, rooms: 4, district: "ЦАО", image: APARTMENT_2, tag: "Топ" },
-  { id: 3, type: "apartment", title: "Квартира в Хамовниках", address: "Фрунзенская наб., 30", price: 38_000_000, area: 72, rooms: 2, district: "ЦАО", image: APARTMENT_1, tag: null },
-  { id: 4, type: "townhouse", title: "Таунхаус в Рублёво-Успенском", address: "Рублёво-Успенское ш., 45", price: 89_000_000, area: 320, rooms: 5, district: "ЗАО", image: APARTMENT_2, tag: "Эксклюзив" },
-  { id: 5, type: "apartment", title: "Студия в Сити", address: "Пресненская наб., 8", price: 22_000_000, area: 45, rooms: 1, district: "ЦАО", image: APARTMENT_1, tag: null },
-  { id: 6, type: "apartment", title: "Квартира на Патриарших прудах", address: "М. Козихинский пер., 7", price: 67_000_000, area: 130, rooms: 4, district: "ЦАО", image: APARTMENT_2, tag: "Топ" },
+  { id: 1, type: "apartment", title: "ЖК «Западный луч»", address: "ул. Вавилова, 68", price: 5_200_000, area: 42, rooms: 1, district: "Советский", image: APARTMENT_1, tag: "Новинка" },
+  { id: 2, type: "apartment", title: "ЖК «Позитив»", address: "ул. Жмайлова, 4е", price: 7_800_000, area: 68, rooms: 2, district: "Советский", image: APARTMENT_2, tag: "Топ" },
+  { id: 3, type: "apartment", title: "ЖК «Родной берег»", address: "пр. Королёва, 12а", price: 6_400_000, area: 56, rooms: 2, district: "Кировский", image: APARTMENT_1, tag: null },
+  { id: 4, type: "apartment", title: "ЖК «Суворовский»", address: "пр. Маршала Жукова, 1", price: 9_100_000, area: 85, rooms: 3, district: "Суворовский", image: APARTMENT_2, tag: "Эксклюзив" },
+  { id: 5, type: "apartment", title: "ЖК «Вершина»", address: "ул. Берег реки Дон, 1", price: 4_900_000, area: 38, rooms: 1, district: "Кировский", image: APARTMENT_1, tag: null },
+  { id: 6, type: "apartment", title: "ЖК «Платовский»", address: "ул. Платовский пр-т, 18", price: 11_500_000, area: 102, rooms: 3, district: "Советский", image: APARTMENT_2, tag: "Топ" },
 ];
 
 const deals = [
-  { year: "2024", title: "Пентхаус, Котельническая набережная", result: "Продажа за 3 недели", price: "118 млн ₽", type: "Продажа" },
-  { year: "2024", title: "4-комн. квартира, Хамовники", result: "Выше рынка на 12%", price: "71 млн ₽", type: "Продажа" },
-  { year: "2023", title: "Таунхаус, Рублёвка", result: "Закрыто за 10 дней", price: "95 млн ₽", type: "Продажа" },
-  { year: "2023", title: "Апартаменты, Москва-Сити", result: "Подобрано под клиента", price: "55 млн ₽", type: "Покупка" },
-  { year: "2023", title: "Квартира, Патриаршие пруды", result: "Полное юридическое сопровождение", price: "63 млн ₽", type: "Покупка" },
-  { year: "2022", title: "Студия, Пресня", result: "Инвестиционная покупка", price: "19 млн ₽", type: "Покупка" },
+  { year: "2024", title: "ЖК «Суворовский», 3-комн. квартира", result: "Продажа за 2 недели", price: "9.2 млн ₽", type: "Продажа" },
+  { year: "2024", title: "ЖК «Позитив», 2-комн. квартира", result: "Выше рынка на 8%", price: "7.8 млн ₽", type: "Продажа" },
+  { year: "2024", title: "ЖК «Западный луч», студия", result: "Оформлена ипотека 5.9%", price: "5.1 млн ₽", type: "Покупка" },
+  { year: "2023", title: "ЖК «Платовский», 3-комн. квартира", result: "Подобрано под клиента", price: "11.2 млн ₽", type: "Покупка" },
+  { year: "2023", title: "ЖК «Родной берег», 2-комн. квартира", result: "Полное юридическое сопровождение", price: "6.3 млн ₽", type: "Покупка" },
+  { year: "2023", title: "ЖК «Вершина», 1-комн. квартира", result: "Инвестиционная покупка", price: "4.7 млн ₽", type: "Покупка" },
 ];
 
 const mapObjects = [
-  { id: 1, x: 48, y: 42 },
-  { id: 2, x: 52, y: 55 },
-  { id: 3, x: 38, y: 60 },
-  { id: 4, x: 62, y: 38 },
-  { id: 5, x: 45, y: 70 },
+  { id: 1, x: 52, y: 38 },
+  { id: 2, x: 45, y: 50 },
+  { id: 3, x: 60, y: 55 },
+  { id: 4, x: 38, y: 44 },
+  { id: 5, x: 55, y: 65 },
 ];
 
 const typeLabels: Record<string, string> = {
   all: "Все",
   apartment: "Квартиры",
-  penthouse: "Пентхаусы",
-  townhouse: "Таунхаусы",
 };
 
-const districtLabels = ["Все", "ЦАО", "ЗАО", "СВАО", "ЮАО"];
+const districtLabels = ["Все", "Советский", "Кировский", "Суворовский"];
 
 function formatPrice(p: number) {
   if (p >= 1_000_000) return `${(p / 1_000_000).toFixed(1).replace(".0", "")} млн ₽`;
@@ -87,7 +85,7 @@ const Index = () => {
       <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-background/95 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
           <button onClick={() => scrollTo("home")} className="font-display text-xl font-light tracking-widest text-gold uppercase">
-            А. Соколова
+            В. Экизьян
           </button>
           <div className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
@@ -427,7 +425,7 @@ const Index = () => {
               <p className="font-body text-xs tracking-[0.3em] uppercase text-gold mb-4">Связаться</p>
               <h2 className="font-display text-5xl font-light text-[#FDFFF5] gold-line mb-12">Контакты</h2>
               <p className="font-body text-base text-[#d6d7d7] leading-relaxed mb-12 mt-10">
-                Готова ответить на все вопросы о покупке, продаже или аренде недвижимости. Первичная консультация — бесплатно.
+                Готова ответить на все ваши вопросы о объектах, скидках и ипотеке.
               </p>
               <div className="space-y-6 mb-12">
                 {[
