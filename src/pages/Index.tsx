@@ -139,7 +139,7 @@ const Index = () => {
               </p>
               <h1 className="animate-fade-in-delay-1 font-display text-5xl md:text-7xl leading-tight mb-6 text-[#FDFFF5]">
                 <span className="italic font-bold">Привет! <span className="text-gold">Я Вика</span> —</span><br />
-                <span style={{ fontFamily: "'Times New Roman', Times, serif", fontWeight: 100 }} className="not-italic text-3xl md:text-4xl text-[#FDFFF5]/80">твой гид на рынке новостроек</span>
+                <span style={{ fontFamily: "'Playfair Display', 'Cormorant Garamond', Georgia, serif", fontWeight: 300 }} className="not-italic text-3xl md:text-4xl text-[#FDFFF5]/80">твой гид на рынке новостроек</span>
               </h1>
               <div className="animate-fade-in-delay-2 w-16 h-px bg-gold mb-6" />
               <p className="animate-fade-in-delay-3 font-body text-base text-[#d6d7d7] leading-relaxed mb-4 max-w-lg">
